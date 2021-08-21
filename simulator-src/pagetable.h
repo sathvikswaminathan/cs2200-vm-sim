@@ -21,6 +21,11 @@ pfn_t pagetable_lookup(vpn_t vpn, int write);
  */
 pfn_t get_free_frame(void);
 
+pfn_t clock_sweep(void);
+
+pfn_t aging(void);
+
+pfn_t wsclock(void);  
 /*******************************************************************************
  * Page table entry.
  */
