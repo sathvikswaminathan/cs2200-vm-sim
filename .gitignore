@@ -1,0 +1,8 @@
+# Compiled headers
+*.h.gch
+
+# Object files
+*.o
+
+# todo
+TODO
