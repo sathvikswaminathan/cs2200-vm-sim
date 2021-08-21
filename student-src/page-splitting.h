@@ -1,4 +1,4 @@
-/* Step - 1 */
+/* STEP - 1 */
 
 #ifndef _STUDENT_PAGE_SPLITTING_H_
 #define _STUDENT_PAGE_SPLITTING_H_
