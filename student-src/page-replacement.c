@@ -18,7 +18,7 @@ pfn_t get_free_frame(void)
 	/* Check for free frames */
 	for(int i = 0; i < CPU_NUM_FRAMES; ++i)
 	{
-		if(rlt[i]->pcb == NULL)
+		if(rlt[i].pcb == NULL)
 		{
 			return i;
 		}
@@ -46,12 +46,12 @@ pfn_t clock_sweep(void)
 
 	for(int i = 0; i < CPU_NUM_FRAMES; ++i)
 	{
-		pte_t* pt = rlt[i]->pagetable;
+		pte_t* pt = rlt[i].pcb->pagetable;
 		vpn_t vpn = rlt[i].vpn;
 
 		if(pt[vpn].used)
 		{
-			used = 0;
+			pt[vpn].used = 0;
 		}
 		else
 		{
@@ -63,11 +63,9 @@ pfn_t clock_sweep(void)
 			swept = 1;
 			i = 0;
 		}
-
-		return -1;
 	}
 
-
+	return -1;
 }
 
 
