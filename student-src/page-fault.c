@@ -20,15 +20,15 @@ pfn_t pagefault_handler(vpn_t request_vpn, int write)
 	pcb_t* victim_pcb;
 
 	/* Get a (free / evicted) frame */
-	victim_pfn = get_free_frame();
+	victim_pfn = get_free_frame();	
 	victim_vpn = rlt[victim_pfn].vpn;
 	victim_pcb = rlt[victim_pfn].pcb;
 
-	/* Pagetable of victim process */
-	pte_t* victim_pt = victim_pcb->pagetable;
-
 	if(victim_pcb)
 	{
+		/* Pagetable of victim process */
+		pte_t* victim_pt = victim_pcb->pagetable;
+
 		/* If page is dirty, write it back to disk */
 		if(victim_pt[victim_vpn].dirty)
 		{

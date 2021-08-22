@@ -3,6 +3,7 @@
 #include "swapfile.h"
 #include "statistics.h"
 #include "pagetable.h"
+#include <stdio.h>
 
 /* Performs page table lookup and returns physical frame number. 
  * Page fault handler is called in case of pagefault. 

@@ -29,7 +29,7 @@ word_t mem_load(vaddr_t va) {
    vpn = VADDR_PAGENUM(va);
    pfn = tlb_lookup(vpn, 0);
    offset = VADDR_OFFSET(va);
-   data = memory[pfn * page_size + offset];
+   data = memory[(pfn * page_size) + offset];
 
    printf("LOADING %3.3hu as data from virtual address %5.5hu.\nVirtual Address Information: (VPN: %5.5hu PFN: %5.5hu OFFSET: %5.5hu)\n", 
           data, va, vpn, pfn, offset);
@@ -59,7 +59,7 @@ void mem_store(vaddr_t va, word_t data) {
 
    count_writes++;
 
-   memory[pfn * page_size + offset] = data;
+   memory[(pfn * page_size) + offset] = data;
 }
 
 /*******************************************************************************

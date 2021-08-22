@@ -75,7 +75,26 @@ pfn_t aging(void)
 	
 }
 
+
 pfn_t wsclock(void)
+{
+
+}
+
+
+pfn_t fifo(void)
+{
+	
+}
+
+
+pfn_t nru(void)
+{
+
+}
+
+
+pfn_t optimal(void)
 {
 
 }
