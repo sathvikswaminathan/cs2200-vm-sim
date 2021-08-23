@@ -1,6 +1,7 @@
 # Virtual Memory Simulator
 
-Extended version of CS2200 Assignment https://www.cc.gatech.edu/~rama/CS2200-External/projects/p3/assignment.html
+Implementation of GaTech CS2200 Assignment 
 
+Clock page replacement algorithm is implemented to evict pages. Outputs statistics corresponding to different performance metrics.
 
-Provides an analysis of different page replacement algorithms.
+For documentation and base simulator code, check: https://www.cc.gatech.edu/~rama/CS2200-External/projects/p3/assignment.html
